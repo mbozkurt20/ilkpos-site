@@ -426,12 +426,6 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  const footerApps = [
-    "ilkPos Yemek",
-    "ilkPos Garson",
-    "ilkPos Kurye",
-    "ilkPos Patron",
-  ];
   return (
     <footer>
       <div className="shell footer-grid">
@@ -465,27 +459,19 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="shell footer-apps">
-        <div className="footer-apps-panel">
-          <span>ilkPos mobil uygulamaları</span>
-          <div className="footer-app-list">
-            {footerApps.map((app) => (
-              <div className="footer-app-item" key={app}>
-                <b>{app}</b>
-                <span className="footer-store-icons">
-                  <i title="App Store" aria-label={`${app} App Store`}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M15.7 12.5c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 3.1-.7 1.4 0 1.9.7 3.1.7 1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.2-2.6 1.2-2.7-.1 0-2.4-.9-2.4-3.7ZM13.6 6.4c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.7-1.3Z" />
-                    </svg>
-                  </i>
-                  <i title="Google Play" aria-label={`${app} Google Play`}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="m4 3 11.7 9L4 21V3Z" />
-                      <path d="m15.7 12 3.2-2.4c.7-.5 1.1-.2 1.1.5v3.8c0 .7-.4 1-1.1.5L15.7 12Z" />
-                    </svg>
-                  </i>
-                </span>
-              </div>
-            ))}
+        <div className="footer-store-badges">
+          <div className="footer-store-badge" aria-label="App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.7 12.5c0-2 1.7-3 1.8-3.1-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.9-3.6 2.2-1.5 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.8 2.2 1.1 0 1.6-.7 3.1-.7 1.4 0 1.9.7 3.1.7 1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.2-2.6 1.2-2.7-.1 0-2.4-.9-2.4-3.7ZM13.6 6.4c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.7-1.3Z" />
+            </svg>
+            <span><small>Şuradan indirin</small><b>App Store</b></span>
+          </div>
+          <div className="footer-store-badge" aria-label="Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m4 3 11.7 9L4 21V3Z" />
+              <path d="m15.7 12 3.2-2.4c.7-.5 1.1-.2 1.1.5v3.8c0 .7-.4 1-1.1.5L15.7 12Z" />
+            </svg>
+            <span><small>Şuradan edinin</small><b>Google Play</b></span>
           </div>
         </div>
       </div>

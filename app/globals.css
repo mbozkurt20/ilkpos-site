@@ -7715,73 +7715,53 @@ html[data-theme="dark"] .small-stats article.module-selector-card .module-select
   margin-top: 42px;
   justify-content: flex-end;
 }
-.footer-apps-panel {
-  width: min(650px, 100%);
-}
-.footer-apps-panel > span {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--orange);
-  font-size: 11px;
-  font-weight: 850;
-  letter-spacing: 0.1em;
-  text-align: right;
-  text-transform: uppercase;
-}
-.footer-app-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-}
-.footer-app-item {
+.footer-store-badges {
   display: flex;
+  gap: 9px;
+}
+.footer-store-badge {
+  display: flex;
+  min-width: 168px;
   min-height: 54px;
-  padding: 9px 10px 9px 15px;
+  padding: 8px 15px;
   align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+  gap: 11px;
   border: 1px solid #2d2925;
-  border-radius: 14px;
+  border-radius: 13px;
   background: #11100f;
-}
-.footer-app-item > b {
-  font-size: 13px;
-  line-height: 1.25;
-}
-.footer-store-icons {
-  display: flex;
-  gap: 6px;
-}
-.footer-store-icons i {
-  display: grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  border: 1px solid #39342f;
-  border-radius: 9px;
-  background: #1b1917;
   color: #fff;
-  font-style: normal;
 }
-.footer-store-icons svg {
-  width: 17px;
-  height: 17px;
+.footer-store-badge > svg {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
   fill: currentColor;
   stroke: currentColor;
   stroke-width: 0.7;
   stroke-linejoin: round;
 }
+.footer-store-badge > span {
+  display: grid;
+  gap: 1px;
+}
+.footer-store-badge small {
+  color: #97918b;
+  font-size: 9px;
+}
+.footer-store-badge b {
+  font-size: 15px;
+  line-height: 1.1;
+}
 .footer-apps + .footer-bottom {
   margin-top: 28px;
 }
-html[data-theme="light"] .footer-app-item {
+html[data-theme="light"] .footer-store-badge {
   border-color: #d9d0c7;
   background: rgba(255, 255, 255, 0.62);
-}
-html[data-theme="light"] .footer-store-icons i {
-  border-color: #d7cec5;
-  background: #fff;
   color: #211d19;
+}
+html[data-theme="light"] .footer-store-badge small {
+  color: #776f68;
 }
 @media (max-width: 560px) {
   .about {
@@ -7796,10 +7776,11 @@ html[data-theme="light"] .footer-store-icons i {
   .footer-apps {
     justify-content: stretch;
   }
-  .footer-apps-panel > span {
-    text-align: left;
+  .footer-store-badges {
+    width: 100%;
+    flex-direction: column;
   }
-  .footer-app-list {
-    grid-template-columns: 1fr;
+  .footer-store-badge {
+    width: 100%;
   }
 }
