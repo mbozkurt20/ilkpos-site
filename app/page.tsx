@@ -162,33 +162,24 @@ export default function Home() {
 
       <section className="brands">
         <div className="shell brand-row">
-          <p>
-            <strong>Güçlü bağlantılar,</strong>
-            <br />
-            tek operasyon.
-          </p>
-          <div className="brand-marquee">
-            <div className="brand-track">
-              {[false, true].map((duplicate) => (
-                <div
-                  className="brand-group"
-                  aria-hidden={duplicate || undefined}
-                  key={duplicate ? "duplicate" : "primary"}
-                >
-                  {integrations.map(([src, name]) => (
-                    <span className="brand-slot" key={`${duplicate}-${name}`}>
-                      <Image
-                        className={`${name === "Ödeal" ? "brand-logo-odeal" : ""} ${name === "inPOS" ? "brand-logo-inpos" : ""}`}
-                        src={src}
-                        alt={duplicate ? "" : name}
-                        width={165}
-                        height={52}
-                      />
-                    </span>
-                  ))}
-                </div>
-              ))}
-            </div>
+          <div className="brand-copy">
+            <span>Entegrasyonlar</span>
+            <p>
+              <strong>Güçlü bağlantılar,</strong> tek operasyon.
+            </p>
+          </div>
+          <div className="brand-grid">
+            {integrations.map(([src, name]) => (
+              <span className="brand-slot" key={name} title={name}>
+                <Image
+                  className={name === "Ödeal" ? "brand-logo-solid-bg" : ""}
+                  src={src}
+                  alt={name}
+                  width={165}
+                  height={52}
+                />
+              </span>
+            ))}
           </div>
         </div>
       </section>
